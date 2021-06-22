@@ -5,7 +5,7 @@ module.exports = {
 
     return queryInterface.createTable('pessoas', {
       cpf: {
-        type: Sequelize.BIGINIT(11),
+        type: Sequelize.BIGINT(11),
         primaryKey: true,
         allowNull: false,
       },
@@ -14,10 +14,10 @@ module.exports = {
         allowNull: false,
       },
       phone: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER(11),
         allowNull: false,
       },
-      birthdate: {
+      birth: {
         type: Sequelize.DATEONLY,
         allowNull: false,
       },
@@ -35,7 +35,7 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
 
-    return queryInterface.dropTable('pessoas');
+    return tqueryInterface.dropTable('pessoas');
 
   }
 };
