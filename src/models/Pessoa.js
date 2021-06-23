@@ -9,7 +9,7 @@ class Pessoa extends Model {
         phone: DataTypes.INTEGER(11),
         birth: DataTypes.DATEONLY,
       },
-      { sequelize, tableName: 'Pessoas' }
+      { sequelize, tableName: 'pessoas' }
     );
   }
 }
