@@ -5,7 +5,7 @@ module.exports = {
   async list(req, res) {
     try {
       const Pessoas = await Pessoa.findAll();
-      return res.json(Pessoas);
+      return res.json({Pessoas});
     } catch (error) {
       return res.json({ message: error.message });
     }
