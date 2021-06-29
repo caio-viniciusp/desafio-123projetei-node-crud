@@ -13,8 +13,8 @@ module.exports = {
   async view(req, res) {
     try {
       const { cpf } = req.params;
-      const pf = await Pessoa.findByPk(cpf);
-      return res.json(pf);
+      const Pessoas = await Pessoa.findByPk(cpf);
+      return res.json(Pessoas);
     } catch (error) {
       return res.json({ message: error.message });
     }
